@@ -15,7 +15,7 @@ const cuotas = (cantCuotas, precio) => {
             alert("El precio en 9 cuotas es de $" + ((precio / cantCuotas) + interes));
             break;
 
-
+  
         case 12:
             alert("El precio en 12 cuotas es de $" + ((precio / cantCuotas) + interes));
             break;
@@ -30,11 +30,11 @@ let cantCuotasFunc = () => {
 */
 let precio = parseInt(prompt("Ingrese precio a pagar. Ingrese 0 para terminar"));
 while (precio != 0) {
-if (isNaN(precio)) {
-    alert("Tenes que ingresar un precio");
-    precio = parseInt(prompt("Ingrese precio a pagar. Ingrese 0 para terminar"));
-} else {
-         let cantCuotas = parseInt(prompt("Ingresa 1, 3, 6, 9 o 12 cuotas. 9 y 12 cuotas incluyen interes del 10%. Ingresa 0 para salir."));
+    if (isNaN(precio)) {
+        alert("Tenes que ingresar un precio");
+        precio = parseInt(prompt("Ingrese precio a pagar. Ingrese 0 para terminar"));
+    } else {
+        let cantCuotas = parseInt(prompt("Ingresa 1, 3, 6, 9 o 12 cuotas. 9 y 12 cuotas incluyen interes del 10%. Ingresa 0 para salir."));
         if (isNaN(cantCuotas)) {
             alert("No ingresaste un numero");
         } else {
@@ -53,12 +53,7 @@ if (isNaN(precio)) {
                         alert("Ingresa una cantidad de cuotas apropiadas.");
                     }
                 }
-
             }
-
-
         }
-
     }
-
 }
