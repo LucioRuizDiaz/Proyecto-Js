@@ -4,9 +4,7 @@
         this.nombre = nombre;
         this.precio = parseFloat(precio);
     }
-    sumarIva(){
-        this.precio = this.precio * 1.21;
-    }
+
 
 
 
