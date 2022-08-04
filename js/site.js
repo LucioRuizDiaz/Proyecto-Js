@@ -41,9 +41,11 @@ facturas.push(new Factura(10, "CHURRO", 70));
 console.log(facturas);
 */
 
+
+//Creacion array compra
 const compra = [];
 
-
+//Funcion final de precio y carrito
 const precioTotal = () => {
     const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
     console.log(compra);
@@ -62,6 +64,7 @@ const precioTotal = () => {
     
 }
 
+//Funcion para sumar facturas y creacion de objetos en el array compra
 const compraFunc = (eleccion, eleccionFacturas) => {
 if (eleccion == 1){
         if(eleccionFacturas == 1){
@@ -119,6 +122,7 @@ if (eleccion == 1){
 }
 
 
+//funcion para eleccion de docena
 const switchEleccion = (eleccion) => {
     //let loop2 = 1;
     switch(eleccion) {
@@ -161,11 +165,13 @@ const switchEleccion = (eleccion) => {
 }
 
 
+//
 let loop = 1;
 while (loop != 0){
     let eleccion = parseInt(prompt("Buenos dias! Bienvenido a Panaderia Josefina.\nElija la opcion que le parezca mas conveniente:\n1.Elegir docena de medialunas(grasa o manteca).\n2.Elegir docena de facturas variadas a elección.\n3.Salir"));
     switchEleccion(eleccion);
 
+}
 
 
     /*
@@ -192,9 +198,6 @@ while (loop != 0){
     }
 
 */
-}
-
-
 
  /*
  const cuotas = (cantCuotas, precio) => {
