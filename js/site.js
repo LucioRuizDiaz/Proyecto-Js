@@ -1,4 +1,4 @@
-//ESTA VA A SER LA RAMA DE LA ENTREGA DE DOM
+
 
 /*
     cuotas(cantCuotas, precio){
@@ -41,15 +41,25 @@ facturas.push(new Factura(10, "CHURRO", 70));
 console.log(facturas);
 */
 
-const compra = []
+const compra = [];
 
 
 const precioTotal = () => {
     const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
     console.log(compra);
     console.log("El precio total es: $" + precioTotalArr);
-    alert("En la consola esta el precio total de tu compra. Muchas gracias.")
-
+    alert("En pantalla esta el precio total de tu compra. Muchas gracias.")
+            //let precioPantallaInner = `El precio de tu compra es: ${precioTotalArr}`;
+    let carritoCompra = document.getElementById("carritoCompra");
+    for(const facturasCompra of compra){
+        let listaCompra = document.createElement("p");
+        listaCompra.innerHTML = ` ${facturasCompra.nombre}`;
+        carritoCompra.appendChild(listaCompra);
+    }   
+    let precioPantalla = document.createElement("p");
+    precioPantalla.innerHTML = `El precio de tu compra es: $${precioTotalArr}`;
+    document.body.append(precioPantalla);
+    
 }
 
 const compraFunc = (eleccion, eleccionFacturas) => {
