@@ -166,7 +166,7 @@ const switchEleccion = (eleccion) => {
 
 
 //
-let loop = 1;
+let loop = 0;
 while (loop != 0){
     let eleccion = parseInt(prompt("Buenos dias! Bienvenido a Panaderia Josefina.\nElija la opcion que le parezca mas conveniente:\n1.Elegir docena de medialunas(grasa o manteca).\n2.Elegir docena de facturas variadas a elección.\n3.Salir"));
     switchEleccion(eleccion);
