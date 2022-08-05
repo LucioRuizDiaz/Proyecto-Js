@@ -26,9 +26,8 @@ h1 {
   margin-bottom: 100px;
 }
 
-#carrito {
-  display: flex;
-  justify-content: center;
+#carritoPrecio {
+
   border: 2px solid black;
   padding-bottom: 50px;
   width: 80vw;

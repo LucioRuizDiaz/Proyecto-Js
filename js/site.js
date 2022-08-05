@@ -45,6 +45,121 @@ console.log(facturas);
 //Creacion array compra
 const compra = [];
 
+/*
+const sumarRestarFacturas = (op, ) => {
+
+}*/
+
+/*
+const sumarCantFacturas = (cantFacturasInt) => {
+    cantFacturasInt = cantFacturasInt + 1;
+    console.log(cantFacturasInt);
+    cantFacturas.innerHTML = cantFacturasInt.toString();
+    
+}
+
+let cantFacturas = document.getElementById("cantidadFacturas").innerText;
+let cantFacturasInt = parseInt(cantFacturas);
+console.log(cantFacturasInt);
+let botonSumar = document.getElementById("btnSumar");
+
+botonSumar.onclick = (e) => { 
+    console.log("SUMAR");
+    //sumarCantFacturas(cantFacturasInt);
+    cantFacturasInt = cantFacturasInt + 1;
+    console.log (cantFacturasInt)
+    cantFacturas = cantFacturasInt.toString();
+    cantFacturas.append = cantFacturas;
+
+
+}*/
+
+/*
+const sumarORestar = (boton, cantFacturasInt) =>{
+if (boton = botonSumar){
+    cantFacturasInt += 1;
+    cantFacturas.innerHTML = cantFacturasInt;
+    console.log("SUMAR")
+    return cantFacturas;
+}else if (boton = botonRestar){
+    cantFacturasInt -= 1;
+    cantFacturas.innerHTML = cantFacturasInt;
+    return cantFacturas;
+}
+}*/
+
+let cantFacturas = document.getElementById("cantidadFacturas");
+let cantFacturasInt = parseInt(cantFacturas.innerText);
+let botonSumar = document.getElementById("btnSumar");
+let botonRestar = document.getElementById("btnRestar");
+//let botonSumar = document.getElementsByClassName("btnSumar");
+//let botonRestar = document.getElementsByClassName("btnRestar");
+/*
+for(const boton of botonSumar){
+    botonSumar
+}*/
+botonSumar.onclick = () => { 
+    //sumarORestar(botonSumar, cantFacturasInt);
+    cantFacturasInt += 1;
+    cantFacturas.innerHTML = cantFacturasInt;
+}
+
+botonRestar.onclick = () => { 
+    //sumarORestar(botonRestar, cantFacturasInt);
+    if (cantFacturasInt <= 0){
+        cantFacturasInt = 0;
+        cantFacturas.innerHTML = cantFacturasInt;
+
+    }
+    else {    
+        cantFacturasInt -= 1;
+        cantFacturas.innerHTML = cantFacturasInt;
+    }
+
+}
+ 
+let agregar = document.getElementById("agregar");
+
+agregar.onclick = () => {
+    for(let i = 0; i<cantFacturasInt; i++){
+        compra.push(new Compra("MEDIALUNA DE MANTECA", 60));
+    }
+    let carritoCompra = document.getElementById("carrito");
+
+    for(const facturasCompra of compra){
+        let listaCompra = document.createElement("li");
+        listaCompra.innerHTML = ` ${facturasCompra.nombre}: $${facturasCompra.precio}`;
+        carritoCompra.appendChild(listaCompra);
+
+    }
+
+    const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
+    let precioFinal = document.getElementById("carritoPrecio");
+    let precioPantalla = document.createElement("p");
+    precioPantalla.innerHTML = `El precio de tu compra es: $${precioTotalArr}`;
+    precioFinal.appendChild(precioPantalla);
+    
+   /* let botonBorrar = document.getElementById("botonBorrar");
+    botonBorrar.innerHTML = "<button type='button' class=btnBorrar>Borrar todo</button>";
+
+    botonBorrar.onclick = () =>{
+        cantFacturas.remove();
+        precioFinal.remove();
+
+    }*/
+
+
+
+    cantFacturasInt = 0;
+    cantFacturas.innerHTML = cantFacturasInt;
+
+}   
+
+
+
+
+
+/*
 //Funcion final de precio y carrito
 const precioTotal = () => {
     const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
