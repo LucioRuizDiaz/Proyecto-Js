@@ -4,13 +4,12 @@
   box-sizing: border-box;
 }
 
-/*
-body{
-    background-color:  black !important;
+body {
+  background-color: #cbc0d3 !important;
+}
 
-}*/
 h1 {
-  color: #B4A7B7;
+  color: #550c12;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,14 +25,76 @@ h1 {
   margin-bottom: 100px;
 }
 
-#carritoPrecio {
-
+#carrito {
+  display: flex;
+  justify-content: center;
   border: 2px solid black;
   padding-bottom: 50px;
   width: 80vw;
   margin-left: 10vw;
 }
 
+.nav-link {
+  color: #cbc0d3 !important;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  border: 2px solid black;
+}
+
+.card-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: card-1;
+  border-radius: 5px;
+}
+
+.card-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: card-2;
+  border-radius: 5px;
+}
+
+.card-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: card-3;
+  border-radius: 5px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-areas: "card-1 card-2 card-3";
+  gap: 1.5vw;
+}
+
+.card-grid img {
+  height: 400px;
+  width: 450px;
+}
+
+.card-grid a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
+.card-4 {
+	display: flex;
+	justify-content: center;
+	grid-area: card-4;
+	border-radius: 5px;
+}*/
 /*
 #carritoCompra{
     display: flex;
