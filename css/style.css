@@ -13,6 +13,24 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+#carritoCompra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+p {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
