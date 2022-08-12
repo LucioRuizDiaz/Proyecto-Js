@@ -21,22 +21,38 @@ h1 {
 	margin-top: 5px !important;
 }
 
+#accordion-products {
+	margin-top: 300px;
+}
+
 #facturas {
 	margin-bottom: 100px;
 }
 
 #carrito {
-	display: flex;
-	justify-content: center;
+	margin-top: 100px;
+}
+
+#carritoPrecio {
+	text-align: center;
 	border: 2px solid black;
-	padding-bottom: 50px;
 	width: 80vw;
 	margin-left: 10vw;
+	margin-bottom: 20px;
 }
+
+#precioFinal {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
 .nav-link {
 	color: $languid-lavender !important;
 }
 
+.nav-products {
+	margin-bottom: 100px !important;
+}
 .card-1,
 .card-2,
 .card-3,
@@ -81,21 +97,6 @@ h1 {
 	text-decoration: none;
 	color: black;
 }
-/*
-.card-4 {
-	display: flex;
-	justify-content: center;
-	grid-area: card-4;
-	border-radius: 5px;
-}*/
-
-/*
-#carritoCompra{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid black;
-    margin-bottom: 10px;
+.listaCompraClass {
+	list-style: none;
 }
-*/

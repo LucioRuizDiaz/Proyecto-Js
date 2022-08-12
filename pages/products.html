@@ -20,738 +20,610 @@
 		<title>19/07</title>
 	</head>
 	<body>
-		<h1>ENTREGA EVENTOS</h1>
+		<header>
+			<nav
+				class="navbar fixed-top navbar-expand-lg nav-products"
+				style="background-color: #210f04"
+			>
+				<div class="container-fluid">
+					<!-- LOGO -->
+					<a class="navbar-brand" href="index.html">
+						<img
+							src="..."
+							alt="Logo de la compañia"
+							class="img-header"
+							style="color: #cbc0d3ff"
+						/>
+					</a>
 
-		<section>
-			<div class="accordion accordion-flush" id="accordionFlushExample">
-				<div class="accordion-item">
-				  <h2 class="accordion-header" id="flush-headingOne">
-					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-					  Accordion Item #1
+					<!-- FIN LOGO -->
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasNavbar"
+						aria-controls="offcanvasNavbar"
+					>
+						<span class="navbar-toggler-icon"></span>
 					</button>
-				  </h2>
-				  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-					<div class="accordion-body">
-						<h2 class="text-center">Elegi tus facturas!</h2>
 
-						<div id="facturas">
-							<div class="row row-cols-1 row-cols-md-6 g-4">
-								<!-- Medialuna de Manteca-->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Medialuna de Manteca</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
+					<div
+						class="offcanvas offcanvas-end"
+						tabindex="-1"
+						id="offcanvasNavbar"
+						aria-labelledby="offcanvasNavbarLabel"
+					>
+						<div
+							class="offcanvas-header header"
+							style="background-color: #210f04"
+						>
+							<h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="offcanvas-body" style="background-color: #210f04">
+							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+								<li>
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="products.html"
+										>Productos</a
+									>
+								</li>
+								<li>
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="carrito.html"
+										>Carrito</a
+									>
+								</li>
+								<li>
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="contact.html"
+										>Contacto</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section id="accordion-products">
+				<div class="accordion accordion-flush" id="accordionFlushExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingOne">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseOne"
+								aria-expanded="false"
+								aria-controls="flush-collapseOne"
+							>
+								Facturas
+							</button>
+						</h2>
+						<div
+							id="flush-collapseOne"
+							class="accordion-collapse collapse"
+							aria-labelledby="flush-headingOne"
+							data-bs-parent="#accordionFlushExample"
+						>
+							<div class="accordion-body">
+								<h2 class="text-center">Elegi tus facturas!</h2>
+
+								<div id="facturas">
+									<div class="row row-cols-1 row-cols-md-6 g-4">
+										<!-- Medialuna de Manteca-->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Medialuna de Manteca</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$60</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="medMant"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
 										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
+
+										<!-- Medialuna de Grasa -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Medialuna de Grasa</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$60</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="medGrasa"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
 										</div>
+
+										<!-- Vigilante -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Vigilante</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="vigilante"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Tortita Negra-->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Tortita Negra</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="tortNegra"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Pan de Leche -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Pan de Leche</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="panDeLeche"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Cañoncito -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Cañoncito</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="cañon"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Hojaldre con DDL -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Hojaldre con DDL</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="hojConDDL"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Sacramento -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sacramento</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sacramento"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Lenguita -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Lenguita</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="lenguita"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Bola de Fraile -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Bola de Fraile</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$80</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="bolaDeFraile"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Churro -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Churro</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$70</p>
+											</div>
+
+											<!-- Buttons -->
+											<div class="cantProductosInd container">
+												<div class="row agregar">
+													<button
+														id="churro"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- Churro con DDL -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Churro con DDL</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$75</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="churroConDDL"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Fin Cards -->
 									</div>
 								</div>
-			
-			
-								<!-- Medialuna de Grasa -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Medialuna de Grasa</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Vigilante -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Vigilante</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Tortita Negra-->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Tortita Negra</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Pan de Leche -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Pan de Leche</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Cañoncito -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Cañoncito</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Hojaldre con DDL -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Hojaldre con DDL</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Sacramento -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Sacramento</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-								<!-- Lenguita -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Lenguita/h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-			
-								<!-- Bola de Fraile -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Bola de Fraile</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-								<!-- Churro -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Churro</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-			
-									<!-- Buttons -->
-									<div class="cantProductosInd container">
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-			
-								<!-- Churro con DDL -->
-								<div>
-									<div>
-										<img src="" alt="" />
-									</div>
-									<div>
-										<h5>Churro con DDL</h5>
-										<p>Agrega la cantidad que quieras de este item</p>
-									</div>
-									<div class="cantProductosInd container">
-										<!-- Buttons -->
-										<div class="row">
-											<button
-												type="button"
-												class="btnRestar btn btn-primary btn-sm col btnRestar"
-												id="btnRestar"
-											>
-												-
-											</button>
-											<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-												0
-											</p>
-											<button
-												type="button"
-												class="btnSumar btn btn-primary btn-sm col btnSumar"
-												id="btnSumar"
-											>
-												+
-											</button>
-										</div>
-										<div class="row agregar">
-											<button type="button" class="btn btn-primary btn-sm col">
-												Agregar
-											</button>
-										</div>
-									</div>
-								</div>
-								<!-- Fin Cards -->
 							</div>
 						</div>
 					</div>
-				  </div>
-				</div>
 
-				<div class="accordion-item">
-				  <h2 class="accordion-header" id="flush-headingThree">
-					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-					  Accordion Item #2
-					</button>
-				  </h2>
-				  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-					<div class="accordion-body">
-						<!-- Sanguche de JYQ -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de JyQ</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="flush-headingThree">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#flush-collapseThree"
+								aria-expanded="false"
+								aria-controls="flush-collapseThree"
+							>
+								Sanguches de miga
+							</button>
+						</h2>
+						<div
+							id="flush-collapseThree"
+							class="accordion-collapse collapse"
+							aria-labelledby="flush-headingThree"
+							data-bs-parent="#accordionFlushExample"
+						>
+							<div class="accordion-body">
+								<h2 class="text-center">Elegi tus sanguchitos!</h2>
+								<div id="sanguches">
+									<div class="row row-cols-1 row-cols-md-3 g-4">
+										<!-- Sanguche de JYQ -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de JyQ</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$110</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
 
-					<!-- Sanguche de Jamon y Tomate -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de Jamon y Tomate</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
-						<!-- Sanguche de Jamon y Huevo -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de Jamon y Huevo</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
-						<!-- Sanguche de Jamon Crudo y Queso -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de Jamon Crudo y Queso</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
-					<!-- Sanguche de Jamon y Aceitunas -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de Jamon y Aceitunas</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
-						<!-- Sanguche de Cantimpalo y Queso -->
-						<div>
-							<div>
-								<img src="" alt="" />
-							</div>
-							<div>
-								<h5>Sanguche de Cantimpalo y Queso</h5>
-								<p>Agrega la cantidad que quieras de este item</p>
-							</div>
-							<div class="cantProductosInd container">
-								<!-- Buttons -->
-								<div class="row">
-									<button
-										type="button"
-										class="btnRestar btn btn-primary btn-sm col btnRestar"
-										id="btnRestar"
-									>
-										-
-									</button>
-									<p class="col" id="cantidadFacturas" class="cantidadFacturas">
-										0
-									</p>
-									<button
-										type="button"
-										class="btnSumar btn btn-primary btn-sm col btnSumar"
-										id="btnSumar"
-									>
-										+
-									</button>
-								</div>
-								<div class="row agregar">
-									<button type="button" class="btn btn-primary btn-sm col">
-										Agregar
-									</button>
-								</div>
-							</div>
-						</div>
-				
+												<div class="row agregar">
+													<button
+														id="sangJyQ"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
 
+										<!-- Sanguche de Jamon y Tomate -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de Jamon y Tomate</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$110</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sangJyT"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Sanguche de Jamon y Huevo -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de Jamon y Huevo</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$110</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sangJyH"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Sanguche de Jamon Crudo y Queso -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de Jamon Crudo y Queso</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$120</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sangJCyQ"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Sanguche de Jamon y Aceitunas -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de Jamon y Aceitunas</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$120</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sangJyA"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+										<!-- Sanguche de Cantimpalo y Queso -->
+										<div>
+											<div>
+												<img src="" alt="" />
+											</div>
+											<div>
+												<h5>Sanguche de Cantimpalo y Queso</h5>
+												<p>Agrega la cantidad que quieras de este item</p>
+												<p class="text-end">$130</p>
+											</div>
+											<div class="cantProductosInd container">
+												<!-- Buttons -->
+
+												<div class="row agregar">
+													<button
+														id="sangCyQ"
+														type="button"
+														class="btn btn-primary btn-sm col"
+													>
+														Agregar
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				  </div>
 				</div>
-			  </div>
-			
-		</section>
+			</section>
+		</main>
 
-		<section>
+		<section id="carrito">
 			<h2 class="text-center">Tu carrito de compras:</h2>
 			<div id="carritoPrecio">
-				<ul id="carrito"></ul>
+				<ul id="carritoLista"></ul>
+				<!-- <a href="carrito.html"> -->
+				<button
+					id="finalizarCarrito"
+					type="button"
+					class="btn btn-primary btn-sm col"
+				>
+					Finalizar carrito
+				</button>
+				<!-- </a> -->
 			</div>
+			<div id="precioFinal"></div>
 		</section>
 
 		<!-- <div id="carritoCompra">

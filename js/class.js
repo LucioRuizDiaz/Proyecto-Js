@@ -1,4 +1,4 @@
- /*class Factura {
+/*class Factura {
     constructor(id, nombre, precio){
         this.id = parseInt(id);
         this.nombre = nombre;
@@ -6,9 +6,10 @@
     }
  }*/
 
-class Compra{
-    constructor(nombre, precio){
-        this.nombre = nombre;
-        this.precio = parseInt(precio);
-    }
+class Compra {
+	constructor(id, nombre, precio) {
+		this.id = parseInt(id);
+		this.nombre = nombre;
+		this.precio = parseInt(precio);
+	}
 }
