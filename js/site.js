@@ -276,6 +276,14 @@ finalizarCarrito.onclick = () => {
 	precioFinal.appendChild(listaCarrito);
 };
 
+//nightmode
+
+// let nightMode = document.getElementById("nightMode");
+// let divNightMode = document.createElement("div")
+
+// nightMode.onclick = () =>{
+//     divNi
+// }
 /*
 let verCarritoBtn = document.getElementById("verCarrito");
 verCarritoBtn.onclick = () => {
