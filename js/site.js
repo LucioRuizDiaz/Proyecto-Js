@@ -213,7 +213,8 @@ finalizarCarrito.addEventListener("click", function () {
 	//Toastify
 	Toastify({
 		text: "Carrito Finalizado!",
-		duration: 3000
+		duration: 3000,
+		close: true
 	}).showToast();
 
 	let precioFinal = document.getElementById("precioFinal");
