@@ -234,7 +234,24 @@ finalizarCarrito.onclick = () => {
 	// 	listaCarrito.innerHTML = elemento.nombre + " $:" + elemento.precio;
 	// }
 	precioFinal.appendChild(listaCarrito);
+
+	//Toastify
+	Toastify({
+		text: "Carrito Finalizado!",
+		duration: 3000,
+		style: {
+			backgroundColor: black
+		}
+	}).showToast();
 };
+
+document.getElementById("test").addEventListener("click", function () {
+	Toastify({
+		text: "Carrito Finalizado!",
+		duration: 3000
+	}).showToast();
+	alert("prueba");
+});
 
 //nightmode
 
