@@ -209,7 +209,13 @@ function agregarItems(num) {
 //Finalizar Carrito
 
 let finalizarCarrito = document.getElementById("finalizarCarrito");
-finalizarCarrito.onclick = () => {
+finalizarCarrito.addEventListener("click", function () {
+	//Toastify
+	Toastify({
+		text: "Carrito Finalizado!",
+		duration: 3000
+	}).showToast();
+
 	let precioFinal = document.getElementById("precioFinal");
 	// const compraEnJSON = JSON.stringify(compra);
 	// console.log(compraEnJSON);
@@ -234,16 +240,7 @@ finalizarCarrito.onclick = () => {
 	// 	listaCarrito.innerHTML = elemento.nombre + " $:" + elemento.precio;
 	// }
 	precioFinal.appendChild(listaCarrito);
-
-	//Toastify
-	Toastify({
-		text: "Carrito Finalizado!",
-		duration: 3000,
-		style: {
-			backgroundColor: black
-		}
-	}).showToast();
-};
+});
 
 document.getElementById("test").addEventListener("click", function () {
 	Toastify({
