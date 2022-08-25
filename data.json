@@ -1,0 +1,20 @@
+[
+	{ "id": 0, "nombre": "Medialuna de Manteca", "precio": 60 },
+	{ "id": 1, "nombre": "Medialuna de Grasa", "precio": 60 },
+	{ "id": 2, "nombre": "Vigilante", "precio": 70 },
+	{ "id": 3, "nombre": "Tortita Negra", "precio": 70 },
+	{ "id": 4, "nombre": "Pan de Leche", "precio": 70 },
+	{ "id": 5, "nombre": "Cañoncito", "precio": 70 },
+	{ "id": 6, "nombre": "Hojaldre con DDL", "precio": 70 },
+	{ "id": 7, "nombre": "Sacramento", "precio": 70 },
+	{ "id": 8, "nombre": "Lenguita", "precio": 70 },
+	{ "id": 9, "nombre": "Bola de Fraile", "precio": 80 },
+	{ "id": 10, "nombre": "Churro", "precio": 70 },
+	{ "id": 11, "nombre": "Churro con DDL", "precio": 75 },
+	{ "id": 12, "nombre": "Sanguche de Jamon y Queso", "precio": 110 },
+	{ "id": 13, "nombre": "Sanguche de Jamon y Tomate", "precio": 110 },
+	{ "id": 14, "nombre": "Sanguche de Jamon y Huevo", "precio": 110 },
+	{ "id": 15, "nombre": "Sanguche de Jamon Crudo y Queso", "precio": 120 },
+	{ "id": 16, "nombre": "Sanguche de Jamon y Aceitunas", "precio": 120 },
+	{ "id": 17, "nombre": "Sanguche de Cantimpalo y Queso", "precio": 130 }
+]
