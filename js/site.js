@@ -1,5 +1,3 @@
-
-
 /*
     cuotas(cantCuotas, precio){
         const precioEnCuotas =  precio / cantCuotas;    
@@ -24,7 +22,7 @@
          }
     }
 */
- 
+
 /*
 const facturas = [];
 facturas.push(new Factura(0, "MEDIALUNA DE MANTECA", 60));
@@ -41,9 +39,336 @@ facturas.push(new Factura(10, "CHURRO", 70));
 console.log(facturas);
 */
 
+/*
+const sumarRestarFacturas = (op, ) => {
+
+}*/
+
+/*
+const sumarCantFacturas = (cantFacturasInt) => {
+    cantFacturasInt = cantFacturasInt + 1;
+    console.log(cantFacturasInt);
+    cantFacturas.innerHTML = cantFacturasInt.toString();
+    
+}
+
+let cantFacturas = document.getElementById("cantidadFacturas").innerText;
+let cantFacturasInt = parseInt(cantFacturas);
+console.log(cantFacturasInt);
+let botonSumar = document.getElementById("btnSumar");
+
+botonSumar.onclick = (e) => { 
+    console.log("SUMAR");
+    //sumarCantFacturas(cantFacturasInt);
+    cantFacturasInt = cantFacturasInt + 1;
+    console.log (cantFacturasInt)
+    cantFacturas = cantFacturasInt.toString();
+    cantFacturas.append = cantFacturas;
+
+
+}*/
+
+/*
+const sumarORestar = (boton, cantFacturasInt) =>{
+if (boton = botonSumar){
+    cantFacturasInt += 1;
+    cantFacturas.innerHTML = cantFacturasInt;
+    console.log("SUMAR")
+    return cantFacturas;
+}else if (boton = botonRestar){
+    cantFacturasInt -= 1;
+    cantFacturas.innerHTML = cantFacturasInt;
+    return cantFacturas;
+}
+}*/
+
+// let cantFacturas = document.getElementById("cantidadFacturas");
+//Creacion array compra
 const compra = [];
 
+const crearFacturas = (id, nombre, precio) => {
+	compra.push(new Compra(id, nombre, precio));
+};
 
+//Facturas
+let medialunaManteca = document.getElementById("medMant");
+let medialunaGrasa = document.getElementById("medGrasa");
+let vigilante = document.getElementById("vigilante");
+let tortitaNegra = document.getElementById("tortNegra");
+let panDeLeche = document.getElementById("panDeLeche");
+let cañoncito = document.getElementById("cañon");
+let hojaldreConDDL = document.getElementById("hojConDDL");
+let sacramento = document.getElementById("sacramento");
+let lenguita = document.getElementById("lenguita");
+let bolaDeFraile = document.getElementById("bolaDeFraile");
+let churro = document.getElementById("churro");
+let churroConDDL = document.getElementById("churroConDDL");
+
+//Sanguches
+let sangJyQ = document.getElementById("sangJyQ");
+let sangJyT = document.getElementById("sangJyT");
+let sangJyH = document.getElementById("sangJyH");
+let sangJCyQ = document.getElementById("sangJCyQ");
+let sangJyA = document.getElementById("sangJyA");
+let sangCyQ = document.getElementById("sangCyQ");
+
+//EventListeners
+
+medialunaManteca.onclick = () => agregarItems(0);
+medialunaGrasa.onclick = () => agregarItems(1);
+vigilante.onclick = () => agregarItems(2);
+tortitaNegra.onclick = () => agregarItems(3);
+panDeLeche.onclick = () => agregarItems(4);
+cañoncito.onclick = () => agregarItems(5);
+hojaldreConDDL.onclick = () => agregarItems(6);
+sacramento.onclick = () => agregarItems(7);
+lenguita.onclick = () => agregarItems(8);
+bolaDeFraile.onclick = () => agregarItems(9);
+churro.onclick = () => agregarItems(10);
+churroConDDL.onclick = () => agregarItems(11);
+
+sangJyQ.onclick = () => agregarItems(12);
+sangJyT.onclick = () => agregarItems(13);
+sangJyH.onclick = () => agregarItems(14);
+sangJCyQ.onclick = () => agregarItems(15);
+sangJyA.onclick = () => agregarItems(16);
+sangCyQ.onclick = () => agregarItems(17);
+
+//carritoLista
+let carritoLista = document.getElementById("carritoLista");
+
+//Agregar Items
+function agregarItems(num) {
+	switch (num) {
+		case 0:
+			crearFacturas(0, "Medialuna de Manteca", 60);
+			/*listaCompra.innerHTML = "Medialuna de Manteca               $60";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 1:
+			crearFacturas(1, "Medialuna de Grasa", 60);
+			/*listaCompra.innerHTML = "Medialuna de Grasa               $60";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 2:
+			crearFacturas(2, "Vigilante", 70);
+			/*listaCompra.innerHTML = "Vigilante               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 3:
+			crearFacturas(3, "Tortita Negra", 70);
+			/*listaCompra.innerHTML = "Tortita Negra               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 4:
+			crearFacturas(4, "Pan de Leche", 70);
+			/*listaCompra.innerHTML = "Pan de Leche               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 5:
+			crearFacturas(5, "Cañoncito", 70);
+			/*listaCompra.innerHTML = "Cañoncito               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 6:
+			crearFacturas(6, "Hojaldre con DDL", 70);
+			/*listaCompra.innerHTML = "Hojaldre con DDL               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 7:
+			crearFacturas(7, "Sacramento", 70);
+			/*listaCompra.innerHTML = "Sacramento               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 8:
+			crearFacturas(8, "Lenguita", 70);
+			/*listaCompra.innerHTML = "Lenguita               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 9:
+			crearFacturas(9, "Bola de Fraile", 80);
+			/*listaCompra.innerHTML = "Bola de Fraile               $80";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 10:
+			crearFacturas(10, "Churro", 70);
+			/*listaCompra.innerHTML = "Churro               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 11:
+			crearFacturas(11, "Churro con DDL", 75);
+			/*listaCompra.innerHTML = "Churro con DDL               $70";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 12:
+			crearFacturas(12, "Sanguche de Jamon y Queso", 110);
+			/*listaCompra.innerHTML = "Sanguche de Jamon y Queso               $110";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 13:
+			crearFacturas(13, "Sanguche de Jamon y Tomate", 110);
+			/*listaCompra.innerHTML = "Sanguche de Jamon y Tomate               $110";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 14:
+			crearFacturas(14, "Sanguche de Jamon y Huevo", 110);
+			/*listaCompra.innerHTML = "Sanguche de Jamon y Huevo               $110";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+		case 15:
+			crearFacturas(15, "Samguche de Jamon Crudo y Queso", 120);
+			/*listaCompra.innerHTML =
+				"Sanguche de Jamon Crudo y Queso               $120";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+
+		case 16:
+			crearFacturas(16, "Sanguche de Jamon y Aceitunas", 120);
+			/*listaCompra.innerHTML =
+				"Sanguche de Jamon y Aceitunas               $120";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+
+		case 17:
+			crearFacturas(17, "Sanguche de Cantimpalo y Queso", 130);
+			/*listaCompra.innerHTML =
+				"Sanguche de Cantimpalo y Queso               $130";
+			carritoLista.appendChild(listaCompra);*/
+			break;
+	}
+
+	let listaCompra = document.createElement("li");
+
+	for (const facturasCompra of compra) {
+		listaCompra.innerHTML = `${facturasCompra.nombre}: $${facturasCompra.precio} `;
+		listaCompra.className = "listaCompraClass";
+	}
+	carritoLista.appendChild(listaCompra);
+}
+
+//Finalizar Carrito
+
+let finalizarCarrito = document.getElementById("finalizarCarrito");
+finalizarCarrito.onclick = () => {
+	let precioFinal = document.getElementById("precioFinal");
+	// const compraEnJSON = JSON.stringify(compra);
+	// console.log(compraEnJSON);
+
+	//guardar carrito en setitem
+	sessionStorage.setItem("carrito", JSON.stringify(compra));
+
+	//obtener carrito de session
+	const obtenerCarrito = JSON.parse(sessionStorage.getItem("carrito"));
+	// console.log(obtenerCarrito);
+
+	//agregar carrito a carrito.html
+	let listaCarrito = document.createElement("p");
+
+	const precioTotalArr = obtenerCarrito.reduce((acc, el) => acc + el.precio, 0);
+
+	console.log(precioTotalArr);
+	listaCarrito.innerText =
+		"El precio total de tu compra es: $" + precioTotalArr;
+
+	// for (elemento of obtenerCarrito) {
+	// 	listaCarrito.innerHTML = elemento.nombre + " $:" + elemento.precio;
+	// }
+	precioFinal.appendChild(listaCarrito);
+};
+
+//nightmode
+
+// let nightMode = document.getElementById("nightMode");
+// let divNightMode = document.createElement("div")
+
+// nightMode.onclick = () =>{
+//     divNi
+// }
+/*
+let verCarritoBtn = document.getElementById("verCarrito");
+verCarritoBtn.onclick = () => {
+	let obtenerCarrito = JSON.parse(sessionStorage.getItem("carrito"));
+	let ulCarritoFinal = document.getElementById("ulCarritoFinal");
+	let mostrarCarrito = document.createElement("li");
+	console.log(obtenerCarrito);
+};*/
+
+// let cantFacturas = document.getElementsByClassName("cantidadFacturas");
+// let cantFacturasInt = parseInt(cantFacturas.innerText);
+// let botonSumar = document.getElementById("btnSumar");
+// let botonRestar = document.getElementById("btnRestar");
+//let botonSumar = document.getElementsByClassName("btnSumar");
+//let botonRestar = document.getElementsByClassName("btnRestar");
+/*
+for(const boton of botonSumar){
+    botonSumar
+}*/
+
+/*
+console.log("zzzzzz" + cantFacturasInt[0]);
+
+let suma_o_resta;
+
+const sumarORestar = (suma_o_resta) => {
+	if (suma_o_resta === "SUMAR") {
+		cantFacturasInt += 1;
+		cantFacturas.innerHTML = cantFacturasInt;
+	} else if (suma_o_resta === "RESTAR") {
+		if (cantFacturasInt <= 0) {
+			cantFacturasInt = 0;
+			cantFacturas.innerHTML = cantFacturasInt;
+		} else {
+			cantFacturasInt -= 1;
+			cantFacturas.innerHTML = cantFacturasInt;
+		}
+	}
+};
+botonSumar.onclick = () => {
+	//sumarORestar(botonSumar, cantFacturasInt);
+	suma_o_resta = "SUMAR";
+};
+
+botonRestar.onclick = () => {
+	//sumarORestar(botonRestar, cantFacturasInt);
+	suma_o_resta = "RESTAR";
+};
+/*
+let agregar = document.getElementById("agregar");
+
+agregar.onclick = () => {
+	for (let i = 0; i < cantFacturasInt; i++) {
+		compra.push(new Compra("MEDIALUNA DE MANTECA", 60));
+	}
+	let carritoCompra = document.getElementById("carrito");
+
+	for (const facturasCompra of compra) {
+		let listaCompra = document.createElement("li");
+		listaCompra.innerHTML = ` ${facturasCompra.nombre}: $${facturasCompra.precio}`;
+		carritoCompra.appendChild(listaCompra);
+	}
+
+	const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
+	let precioFinal = document.getElementById("carritoPrecio");
+	let precioPantalla = document.createElement("p");
+	precioPantalla.innerHTML = `El precio de tu compra es: $${precioTotalArr}`;
+	precioFinal.appendChild(precioPantalla);
+
+	/* let botonBorrar = document.getElementById("botonBorrar");
+    botonBorrar.innerHTML = "<button type='button' class=btnBorrar>Borrar todo</button>";
+
+    botonBorrar.onclick = () =>{
+        cantFacturas.remove();
+        precioFinal.remove();
+
+    }*/
+/*
+
+	cantFacturasInt = 0;
+	cantFacturas.innerHTML = cantFacturasInt;
+};
+
+/*
+//Funcion final de precio y carrito
 const precioTotal = () => {
     const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
     console.log(compra);
@@ -62,188 +387,5 @@ const precioTotal = () => {
     
 }
 
-const compraFunc = (eleccion, eleccionFacturas) => {
-if (eleccion == 1){
-        if(eleccionFacturas == 1){
-            compra.push(new Compra("MEDIALUNA DE MANTECA", 60));
-        } else if (eleccionFacturas == 2){
-            compra.push(new Compra("MEDIALUNA DE GRASA", 60)); 
-        }else if (isNaN(eleccionFacturas)){
-            alert("Tenes que ingresar un numero.");
-        }else if(eleccionFacturas != 1 || eleccionFacturas != 2){
-            alert("Tenes que ingresar un numero valido.")
-        }
-
-
-    }
-
-    else if (eleccion == 2){
-        switch(eleccionFacturas){
-
-            case 1:
-                compra.push(new Compra("MEDIALUNA DE MANTECA", 60));
-                break;
-            case 2:
-                compra.push(new Compra("MEDIALUNA DE GRASA", 60));
-                break;
-            case 3:
-                compra.push(new Compra("VIGILANTE", 75));
-                break;
-            case 4:
-                compra.push(new Compra("TORTITA NEGRA", 75));
-                break;
-            case 5:
-                compra.push(new Compra("PAN DE LECHE", 75));
-                break;
-            case 6:
-                compra.push(new Compra("CAÑONCITO", 75));
-                break;
-            case 7:
-                compra.push(new Compra("HOJALDRE CON DDL", 75));
-                break;
-            case 8:
-                compra.push(new Compra("SACRAMENTO", 75));
-                break;
-            case 9:
-                compra.push(new Compra("LENGUITA", 75));
-                break;
-            case 10:
-                compra.push(new Compra("BOLA DE FRAILE", 80));
-                break;
-            case 11:
-                compra.push(new Compra("CHURRO", 70));
-                break;           
-        }
-    }
-
-}
-
-
-const switchEleccion = (eleccion) => {
-    //let loop2 = 1;
-    switch(eleccion) {
-        case 1:
-            //const medialunas = facturas.filter(el => el.precio == 60);
-            for(let i = 0; i<=11; i++){
-                        let eleccionFacturas = parseInt(prompt("Elegi las medialunas que quieras: \n 1. Medialuna de manteca.\n 2. Medialuna de grasa.\n\nIngresa 0 para salir."));
-                        if (isNaN(eleccionFacturas)){
-                            alert("Tenes que ingresar un numero")
-                        }else if(eleccionFacturas == 0){
-                            alert ("Nos vemos!")
-                            break;
-                        }else{
-                        compraFunc(eleccion, eleccionFacturas);
-                    }
-                }
-        precioTotal();
-        break;
-        case 2:
-            for(let i = 0; i<=11; i++){
-                    let eleccionFacturas = parseInt(prompt("Elegi las facturas que quieras: \n 1. Medialuna de manteca.\n 2. Medialuna de grasa.\n 3. Vigilante.\n 4. Tortita Negra.\n 5. Pan de Leche.\n 6. Cañoncito. \n 7. Hojaldre con DDL.\n 8. Sacramento. \n 9. Lenguita. \n 10. Bola de Fraile. \n 11. Churro.\n\nIngresa 0 para salir."));
-                    
-                    if (isNaN(eleccionFacturas)){
-                        alert("Tenes que ingresar un numero")
-                    }else if(eleccionFacturas == 0){
-                        alert ("Nos vemos!")
-                        break;
-                    }else{
-                    compraFunc(eleccion, eleccionFacturas);
-                }
-            }
-            precioTotal();
-            break;  
-        case 3:
-            alert("Nos vemos!");
-            loop = 0;
-            break;  
-
-        }
-}
-
-
-let loop = 1;
-while (loop != 0){
-    let eleccion = parseInt(prompt("Buenos dias! Bienvenido a Panaderia Josefina.\nElija la opcion que le parezca mas conveniente:\n1.Elegir docena de medialunas(grasa o manteca).\n2.Elegir docena de facturas variadas a elección.\n3.Salir"));
-    switchEleccion(eleccion);
-
-
-
-    /*
-    let precio = parseFloat(prompt("Ingrese precio de la consola que va a guardar\nIngrese 0 para salir.")).toFixed(2);
-    if (precio == 0){
-        alert ("En la consola van a estar guardadas tus consolas de videojuegos.\nNos vemos!"); 
-        loop = 0;
-       }
-    else{
-        if (isNaN(precio)) {
-            alert("Tenes que ingresar un numero");
-            precio = parseInt(prompt("Ingrese precio de la consola que va a guardar\n Ingrese 0 para salir."));
-        } else {
-           let nombre = prompt("Ingresa el nombre de la consola a guardar. Ingresa ESC para salir.");
-           if(nombre == "ESC"){
-               alert("En la consola van a estar guardadas tus consolas de videojuegos.\nNos vemos!")
-               loop = 0;
-           }else{
-               consolas.push(new Consola(nombre, precio));
-            //    Consola.sumarIva();
-           }
-   
-        }
-    }
 
 */
-}
-
-
-
- /*
- const cuotas = (cantCuotas, precio) => {
-
-    const precioEnCuotas =  precio / cantCuotas;    
-    const interes = precioEnCuotas * 0.1;
-
-    switch (cantCuotas) {
-        case 3:
-            alert("El precio en 3 cuotas es de $" + precioEnCuotas.toFixed(2));
-            break;
-
-        case 6:
-            alert("El precio en 6 cuotas es de $" + precioEnCuotas.toFixed(2));
-            break;
-
-        case 9:
-            alert("El precio en 9 cuotas es de $" + (precioEnCuotas + interes).toFixed(2));
-            break;
-
-  
-        case 12:
-            alert("El precio en 12 cuotas es de $" + (precioEnCuotas + interes).toFixed(2));
-            break;
-
-     }
- }
- */
-
-
-
- /*
- let cantCuotasFunc = () => {
-     cantCuotas = parseInt(prompt("Ingresa 3, 6, 9 o 12 cuotas. 9 y 12 cuotas incluyen interes del 10%"));
- }
- */
-
-
-
-
-
-/*
-const productos = [
-    { id: 1, producto: "Arroz"},
-    { id: 2, producto: "Fideo"},
-    { id: 3, producto: "Pan"}
-];
-
-for (const producto of productos) {
-    console.log(producto.id);
-    console.log(producto.producto)
-}*/

@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"prettier.useTabs": true,
+	"prettier.bracketSpacing": true,
+	"prettier.enable": true,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.fontSize": 14,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}
