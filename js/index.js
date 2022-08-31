@@ -1,3 +1,12 @@
+//Class de la compra
+class Compra {
+	constructor(id, nombre, precio) {
+		this.id = parseInt(id);
+		this.nombre = nombre;
+		this.precio = parseInt(precio);
+	}
+}
+
 //Creacion array compra
 const compra = [];
 
@@ -63,7 +72,7 @@ function agregarItems(num) {
 		let listaCompra = document.createElement("li");
 
 		for (const facturasCompra of compra) {
-			listaCompra.innerHTML = `${facturasCompra.nombre}: ${facturasCompra.precio} `;
+			listaCompra.innerHTML = `${facturasCompra.nombre}: $${facturasCompra.precio} `;
 			listaCompra.className = "listaCompraClass";
 		}
 		carritoLista.appendChild(listaCompra);
@@ -75,12 +84,12 @@ function agregarItems(num) {
 
 //Finalizar Carrito
 
-let finalizarCarrito = document.getElementById("finalizarCarrito");
-finalizarCarrito.addEventListener("click", function () {
+let agregarCarrito = document.getElementById("agregarCarrito");
+agregarCarrito.addEventListener("click", function () {
 	//Toastify
 	Toastify({
-		text: "Carrito Finalizado!",
-		duration: 3000,
+		text: "Agregado a carrito!",
+		duration: 2000,
 		close: true
 	}).showToast();
 
@@ -89,16 +98,29 @@ finalizarCarrito.addEventListener("click", function () {
 	//guardar carrito en setitem
 	sessionStorage.setItem("carrito", JSON.stringify(compra));
 
-	//obtener carrito de session
-	const obtenerCarrito = JSON.parse(sessionStorage.getItem("carrito"));
-
 	//agregar carrito a carrito.html
 	let listaCarrito = document.createElement("p");
 
-	const precioTotalArr = obtenerCarrito.reduce((acc, el) => acc + el.precio, 0);
+	const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
 
 	listaCarrito.innerText =
 		"El precio total de tu compra es: $" + precioTotalArr;
 
 	precioFinal.appendChild(listaCarrito);
+});
+
+//carrito.html
+
+let verCarrito = document.getElementById("verCarrito");
+verCarrito.addEventListener("click", function () {
+	let carritoFinal = document.getElementById("carritoFinal");
+	const obtenerCarrito = JSON.parse(sessionStorage.getItem("carrito"));
+
+	let carritoSession = document.createElement("p");
+
+	for (const i of obtenerCarrito) {
+		carritoSession.innerHTML = `${i.nombre}: $${i.precio} `;
+	}
+
+	carritoFinal.appendChild(carritoSession);
 });
