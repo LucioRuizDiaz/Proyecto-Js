@@ -142,99 +142,59 @@ function agregarItems(num) {
 	switch (num) {
 		case 0:
 			crearFacturas(0, "Medialuna de Manteca", 60);
-			/*listaCompra.innerHTML = "Medialuna de Manteca               $60";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 1:
 			crearFacturas(1, "Medialuna de Grasa", 60);
-			/*listaCompra.innerHTML = "Medialuna de Grasa               $60";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 2:
 			crearFacturas(2, "Vigilante", 70);
-			/*listaCompra.innerHTML = "Vigilante               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 3:
 			crearFacturas(3, "Tortita Negra", 70);
-			/*listaCompra.innerHTML = "Tortita Negra               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 4:
 			crearFacturas(4, "Pan de Leche", 70);
-			/*listaCompra.innerHTML = "Pan de Leche               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 5:
 			crearFacturas(5, "Cañoncito", 70);
-			/*listaCompra.innerHTML = "Cañoncito               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 6:
 			crearFacturas(6, "Hojaldre con DDL", 70);
-			/*listaCompra.innerHTML = "Hojaldre con DDL               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 7:
 			crearFacturas(7, "Sacramento", 70);
-			/*listaCompra.innerHTML = "Sacramento               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 8:
 			crearFacturas(8, "Lenguita", 70);
-			/*listaCompra.innerHTML = "Lenguita               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 9:
 			crearFacturas(9, "Bola de Fraile", 80);
-			/*listaCompra.innerHTML = "Bola de Fraile               $80";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 10:
 			crearFacturas(10, "Churro", 70);
-			/*listaCompra.innerHTML = "Churro               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 11:
 			crearFacturas(11, "Churro con DDL", 75);
-			/*listaCompra.innerHTML = "Churro con DDL               $70";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 12:
 			crearFacturas(12, "Sanguche de Jamon y Queso", 110);
-			/*listaCompra.innerHTML = "Sanguche de Jamon y Queso               $110";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 13:
 			crearFacturas(13, "Sanguche de Jamon y Tomate", 110);
-			/*listaCompra.innerHTML = "Sanguche de Jamon y Tomate               $110";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 14:
 			crearFacturas(14, "Sanguche de Jamon y Huevo", 110);
-			/*listaCompra.innerHTML = "Sanguche de Jamon y Huevo               $110";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 		case 15:
 			crearFacturas(15, "Samguche de Jamon Crudo y Queso", 120);
-			/*listaCompra.innerHTML =
-				"Sanguche de Jamon Crudo y Queso               $120";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 
 		case 16:
 			crearFacturas(16, "Sanguche de Jamon y Aceitunas", 120);
-			/*listaCompra.innerHTML =
-				"Sanguche de Jamon y Aceitunas               $120";
-			carritoLista.appendChild(listaCompra);*/
 			break;
 
 		case 17:
 			crearFacturas(17, "Sanguche de Cantimpalo y Queso", 130);
-			/*listaCompra.innerHTML =
-				"Sanguche de Cantimpalo y Queso               $130";
-			carritoLista.appendChild(listaCompra);*/
-			break;
 	}
 
 	let listaCompra = document.createElement("li");
@@ -249,7 +209,14 @@ function agregarItems(num) {
 //Finalizar Carrito
 
 let finalizarCarrito = document.getElementById("finalizarCarrito");
-finalizarCarrito.onclick = () => {
+finalizarCarrito.addEventListener("click", function () {
+	//Toastify
+	Toastify({
+		text: "Carrito Finalizado!",
+		duration: 3000,
+		close: true
+	}).showToast();
+
 	let precioFinal = document.getElementById("precioFinal");
 	// const compraEnJSON = JSON.stringify(compra);
 	// console.log(compraEnJSON);
@@ -274,7 +241,15 @@ finalizarCarrito.onclick = () => {
 	// 	listaCarrito.innerHTML = elemento.nombre + " $:" + elemento.precio;
 	// }
 	precioFinal.appendChild(listaCarrito);
-};
+});
+
+document.getElementById("test").addEventListener("click", function () {
+	Toastify({
+		text: "Carrito Finalizado!",
+		duration: 3000
+	}).showToast();
+	alert("prueba");
+});
 
 //nightmode
 
