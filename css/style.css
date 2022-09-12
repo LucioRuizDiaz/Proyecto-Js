@@ -1,111 +1,114 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #cbc0d3 !important;
+	background-color: #cbc0d3 !important;
 }
 
 h1 {
-  color: #550c12;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px !important;
-  margin-bottom: 200px !important;
+	color: #550c12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px !important;
+	margin-bottom: 50px !important;
 }
 
 .agregar {
-  margin-top: 5px !important;
+	margin-top: 5px !important;
 }
 
 #accordion-products {
-  margin-top: 300px;
+	margin-top: 300px;
 }
 
 #facturas {
-  margin-bottom: 100px;
+	margin-bottom: 100px;
 }
 
 #carrito {
-  margin-top: 100px;
+	margin-top: 100px;
 }
 
 #carritoPrecio {
-  text-align: center;
-  border: 2px solid black;
-  width: 80vw;
-  margin-left: 10vw;
-  margin-bottom: 20px;
+	text-align: center;
+	border: 2px solid black;
+	width: 80vw;
+	margin-left: 10vw;
+	margin-bottom: 20px;
 }
 
 #precioFinal {
-  text-align: center;
-  margin-bottom: 100px;
+	text-align: center;
+	margin-bottom: 100px;
 }
 
 .nav-link {
-  color: #cbc0d3 !important;
+	color: #cbc0d3 !important;
 }
 
 .nav-products {
-  margin-bottom: 100px !important;
+	margin-bottom: 100px !important;
 }
 
 .card-1,
 .card-2,
-.card-3,
-.card-4 {
-  border: 2px solid black;
+.card-3 {
+	border: 2px solid black;
 }
 
 .card-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  grid-area: card-1;
-  border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	grid-area: card-1;
+	border-radius: 5px;
+	width: 30vw;
 }
 
 .card-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  grid-area: card-2;
-  border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	grid-area: card-2;
+	border-radius: 5px;
+	width: 30vw;
 }
 
 .card-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  grid-area: card-3;
-  border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	grid-area: card-3;
+	border-radius: 5px;
+	width: 30vw;
 }
 
 .card-grid {
-  display: grid;
-  grid-template-areas: "card-1 card-2 card-3";
-  gap: 1.5vw;
+	display: grid;
+	grid-template-areas: ". card-1 card-2 card-3 .";
+	margin-left: 50px;
+	margin-bottom: 100px;
 }
 
 .card-grid img {
-  height: 400px;
-  width: 450px;
+	height: 250px;
+	width: 250px;
 }
 
 .card-grid a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .listaCompraClass {
-  list-style: none;
+	list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

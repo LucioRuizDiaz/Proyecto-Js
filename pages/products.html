@@ -34,7 +34,7 @@
 			>
 				<div class="container-fluid">
 					<!-- LOGO -->
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="../index.html">
 						<img
 							src="..."
 							alt="Logo de la compañia"
@@ -81,14 +81,6 @@
 										aria-current="page"
 										href="products.html"
 										>Productos</a
-									>
-								</li>
-								<li>
-									<a
-										class="nav-link active"
-										aria-current="page"
-										href="carrito.html"
-										>Carrito</a
 									>
 								</li>
 								<li>
@@ -622,12 +614,20 @@
 				<ul id="carritoLista"></ul>
 				<!-- <a href="carrito.html"> -->
 				<button
-					id="finalizarCarrito"
+					id="agregarCarrito"
 					type="button"
 					class="btn btn-primary btn-sm col"
 				>
-					Finalizar carrito
+					Agregar a carrito.
 				</button>
+				<button
+					id="verCarritoHtml"
+					type="button"
+					class="btn btn-primary btn-sm col"
+				>
+					Ver precio del carrito.
+				</button>
+
 				<!-- </a> -->
 			</div>
 			<div id="precioFinal"></div>
@@ -643,15 +643,14 @@
 			src="https://cdn.jsdelivr.net/npm/toastify-js"
 		></script>
 
-		<!-- script -->
-		<script src="../js/class.js"></script>
-		<script src="../js/site.js"></script>
-
 		<!-- BOOTSTRAP -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"
 		></script>
+
+		<!-- script -->
+		<script src="../js/index.js"></script>
 	</body>
 </html>
