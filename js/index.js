@@ -61,8 +61,11 @@ sangCyQ.onclick = () => agregarItems(17);
 //carritoLista
 let carritoLista = document.getElementById("carritoLista");
 
+//contador para eliminar
+let contador = 0;
 //Agregar Items
 function agregarItems(num) {
+	contador++;
 	const asyncFunc = async () => {
 		const response = await fetch("../data.json");
 		const data = await response.json();
@@ -97,8 +100,12 @@ agregarCarrito.addEventListener("click", function () {
 
 	//guardar carrito en setitem
 	sessionStorage.setItem("carrito", JSON.stringify(compra));
+});
 
-	//agregar carrito a carrito.html
+//agregar carrito a carrito.html
+
+let verCarritoHtml = document.getElementById("verCarritoHtml");
+verCarritoHtml.addEventListener("click", function () {
 	let listaCarrito = document.createElement("p");
 
 	const precioTotalArr = compra.reduce((acc, el) => acc + el.precio, 0);
@@ -107,20 +114,4 @@ agregarCarrito.addEventListener("click", function () {
 		"El precio total de tu compra es: $" + precioTotalArr;
 
 	precioFinal.appendChild(listaCarrito);
-});
-
-//carrito.html
-
-let verCarrito = document.getElementById("verCarrito");
-verCarrito.addEventListener("click", function () {
-	let carritoFinal = document.getElementById("carritoFinal");
-	const obtenerCarrito = JSON.parse(sessionStorage.getItem("carrito"));
-
-	let carritoSession = document.createElement("p");
-
-	for (const i of obtenerCarrito) {
-		carritoSession.innerHTML = `${i.nombre}: $${i.precio} `;
-	}
-
-	carritoFinal.appendChild(carritoSession);
 });
