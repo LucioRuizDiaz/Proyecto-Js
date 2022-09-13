@@ -61,11 +61,8 @@ sangCyQ.onclick = () => agregarItems(17);
 //carritoLista
 let carritoLista = document.getElementById("carritoLista");
 
-//contador para eliminar
-let contador = 0;
 //Agregar Items
 function agregarItems(num) {
-	contador++;
 	const asyncFunc = async () => {
 		const response = await fetch("../data.json");
 		const data = await response.json();
